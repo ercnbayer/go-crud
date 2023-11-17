@@ -62,7 +62,7 @@ func main() {
 	dbName := os.Getenv("POSTGRES_DB")
 	
 
-	userName := os.Getenv("POSTGRES_USER")
+	userName := os.Getenv("POSTGRES_USER") //getting .env variables
 	dbPassword := os.Getenv("POSTGRES_PASSWORD")
 	dbPort := os.Getenv("PORT")
 
@@ -70,7 +70,7 @@ func main() {
 	
 	fmt.Println(dsn)
 
-	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{}) // connecting db
 	if err != nil {
 		log.Fatal(err)
 	}
