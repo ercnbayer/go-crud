@@ -32,7 +32,7 @@ func InsertPerson( person *Person, db *gorm.DB) {
 
 func DeletePerson(person *Person,db *gorm.DB){	
 	
-	db.Delete(&person); // where clause istiyor id ye göre hareket etmiyor
+	db.Delete(&person); 
 	
 	fmt.Println(person,"deleted");
 	
@@ -40,7 +40,7 @@ func DeletePerson(person *Person,db *gorm.DB){
 
 func UpdatePerson(person *Person,db *gorm.DB){
 
-	db.Save(person);// where condition istiyor id e göre hareket etmiyor
+	db.Save(person);
 	
 	fmt.Println("updated:",person);
 
